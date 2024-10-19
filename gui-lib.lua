@@ -59,3 +59,5 @@ function GuiLib:UIListLayout(Parent, Padding, FillDirection, HorizontalAlignment
 
 	return UIListLayout
 end
+
+return GuiLib
