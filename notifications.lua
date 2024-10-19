@@ -76,3 +76,5 @@ function NotificationsModule:MakeNotification(_Type, _Color, _Title, _Desc, _Rea
 	
 	Notification:Destroy()
 end
+
+return NotificationsModule
