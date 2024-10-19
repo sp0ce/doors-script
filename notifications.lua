@@ -68,13 +68,17 @@ function Notifications:MakeNotification(_Type, _Color, _Title, _Desc, _Reason, _
 	Reason.TextXAlignment = Enum.TextXAlignment.Left
 	GuiLib:UIPadding(Reason, UDim.new(0, -2), UDim.new(), UDim.new(), UDim.new(0, -2))
 	
-	TweenService:Create(Notification, TweenInfo.new(.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.fromScale(1, .2)}):Play()
-	task.wait(5)
+	task.spawn(function()
+		TweenService:Create(Notification, TweenInfo.new(.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.fromScale(1, .2)}):Play()
+		task.wait(5)
 
-	TweenService:Create(Notification, TweenInfo.new(.5, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {Size = UDim2.fromScale(0, .2)}):Play()
-	task.wait(.5)
+		TweenService:Create(Notification, TweenInfo.new(.5, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {Size = UDim2.fromScale(0, .2)}):Play()
+		task.wait(.5)
+
+		Notification:Destroy()
+	end)
 	
-	Notification:Destroy()
+	return Notification
 end
 
 return Notifications
