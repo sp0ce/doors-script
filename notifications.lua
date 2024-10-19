@@ -2,7 +2,7 @@ local GuiLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/sp0ce/
 
 local TweenService = game:GetService("TweenService")
 
-local NotificationsModule = {}
+local Notifications = {}
 
 local Player = game.Players.LocalPlayer
 
@@ -14,7 +14,7 @@ local NotificationsHolder = GuiLib:Frame(Gui, Vector2.new(.95, 0), UDim2.fromSca
 NotificationsHolder.SizeConstraint = Enum.SizeConstraint.RelativeYY
 GuiLib:UIListLayout(NotificationsHolder, UDim.new(.1, 0), Enum.FillDirection.Vertical, Enum.HorizontalAlignment.Right, Enum.VerticalAlignment.Top)
 
-function NotificationsModule:MakeNotification(_Type, _Color, _Title, _Desc, _Reason, _Icon)
+function Notifications:MakeNotification(_Type, _Color, _Title, _Desc, _Reason, _Icon)
 	local Notification = GuiLib:Frame(NotificationsHolder, Vector2.new(.95, .5), UDim2.new(), UDim2.fromScale(0, .2), Color3.new(), 1)
 	
 	local Frame = GuiLib:Frame(Notification, Vector2.new(), UDim2.new(), UDim2.fromScale(1, 1), Color3.fromRGB(38, 25, 25), .3)
@@ -77,4 +77,4 @@ function NotificationsModule:MakeNotification(_Type, _Color, _Title, _Desc, _Rea
 	Notification:Destroy()
 end
 
-return NotificationsModule
+return Notifications
