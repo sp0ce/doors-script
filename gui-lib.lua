@@ -14,6 +14,7 @@ end
 function GuiLib:TextLabel(Parent, AnchorPoint, Position, Size, TextFont, TextColor, Text)
 	local TextLabel = Instance.new("TextLabel", Parent)
 	TextLabel.BackgroundTransparency = 1
+	TextLabel.TextScaled = true
 	TextLabel.AnchorPoint = AnchorPoint
 	TextLabel.Position = Position
 	TextLabel.Size = Size
