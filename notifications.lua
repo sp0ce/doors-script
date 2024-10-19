@@ -23,7 +23,7 @@ function Notifications:MakeNotification(_Type, _Color, _Title, _Desc, _Reason, _
 	GuiLib:UIPadding(Frame, UDim.new(.05, 0), UDim.new(.015, 0), UDim.new(.05, 0), UDim.new(.05, 0))
 	GuiLib:UIStroke(Frame, _Color, 3)
 	
-	local Type: TextLabel = GuiLib:TextLabel(Frame, Vector2.new(0, 1), UDim2.fromScale(0, -.14), UDim2.new(1, 0, .2, 5), Enum.Font.Oswald, Color3, _Type)
+	local Type: TextLabel = GuiLib:TextLabel(Frame, Vector2.new(0, 1), UDim2.fromScale(0, -.14), UDim2.new(1, 0, .2, 5), Enum.Font.Oswald, Color3.new(), _Type)
 	Type.FontFace.Family = "rbxassetid://11702779517"
 	Type.FontFace.Weight = Enum.FontWeight.Heavy
 	Type.FontFace.Style = Enum.FontStyle.Normal
