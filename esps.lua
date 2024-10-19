@@ -14,7 +14,7 @@ function Esps:MakeGps(Object, Color, Text)
 	BillboardGui.Adornee = Object
 	BillboardGui.AlwaysOnTop = true
 	BillboardGui.ResetOnSpawn = false
-	BillboardGui.Size = UDim2.fromOffset(200, 100)
+	BillboardGui.Size = UDim2.fromOffset(200, 50)
 	
 	local ObjectName = GuiLib:TextLabel(BillboardGui, Vector2.new(0, 0), UDim2.fromScale(0, 0), UDim2.fromScale(1, .5), Enum.Font.Oswald, Color, Text)
 	ObjectName.TextStrokeTransparency = .5
